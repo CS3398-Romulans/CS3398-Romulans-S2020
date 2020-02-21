@@ -10,11 +10,11 @@ namespace Frisbee
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Login();
         }
 
         protected override void OnStart()
-        {
+        { 
         }
 
         protected override void OnSleep()
