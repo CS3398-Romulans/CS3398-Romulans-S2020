@@ -15,7 +15,7 @@ namespace Frisbee
 
          async void LoginButtonClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync( new MainPage());
+            await Navigation.PushModalAsync( new MainPage());
         }
     }
 }
