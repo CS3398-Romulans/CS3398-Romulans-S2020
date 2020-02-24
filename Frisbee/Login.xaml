@@ -12,7 +12,7 @@
                 <Image HorizontalOptions="Center" WidthRequest="300" Source="maco.jpg"/>  
                 <Frame BackgroundColor="#F5F5F5" HasShadow="True">  
                     <StackLayout Orientation="Vertical" Spacing="10">  
-                        <Entry x:Name="Email" Text="{Binding Email}" Placeholder=""   
+                        <Entry x:Name="Username" Text="{Binding Email}" Placeholder=""   
                                PlaceholderColor="Black" HeightRequest="40"   
                                Keyboard="Email"  
                                TextColor="Black"/>  

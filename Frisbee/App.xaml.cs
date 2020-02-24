@@ -6,6 +6,8 @@ namespace Frisbee
 {
     public partial class App : Application
     {
+
+        public static string Username { get; set; }
         public App()
         {
             InitializeComponent();

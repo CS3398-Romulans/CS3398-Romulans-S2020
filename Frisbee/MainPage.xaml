@@ -2,32 +2,50 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Frisbee.MainPage">
    <StackLayout BackgroundColor="#f5f5f5">
     <Grid>
+
       <Grid.RowDefinitions>
-        <RowDefinition Height="*" />
-        <RowDefinition Height="*" />
       </Grid.RowDefinitions>
+
       <Grid.ColumnDefinitions>
         <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="2*" />
         <ColumnDefinition Width="*" />
       </Grid.ColumnDefinitions>
-            <Label Text="Frisbee" HorizontalOptions="Start"></Label>
-                <Button
-                    Text="Gallery"
-                    Grid.Row="15"
-                    Grid.Column="0">
-                </Button>
 
-                <Button
-                    Text="Camera"
-                    Grid.Row="15"
-                    Grid.Column="1">
-                 </Button>
+      <Label Text="Frisbee" HorizontalOptions="Center"></Label>
 
-                <Button 
-                     Text="Share"
-                     Grid.Row="15"
-                     Grid.Column="2">
-                </Button>
+      <Label
+
+          x:Name= "HelloMessage"
+          Text="Hello There"
+          FontSize="30"
+          FontFamily="HelveticaNeue"
+          Grid.Row="5"
+          Grid.Column="1"
+          HorizontalOptions="Center"
+          VerticalOptions="CenterAndExpand"
+          >
+
+      </Label>
+
+       <Button
+           Text="Gallery"
+           Grid.Row="16"
+           Grid.Column="0">
+       </Button>
+
+       <Button
+           Text= "Camera"
+           Grid.Row="16"
+           Grid.Column="1">
+        </Button>
+
+       <Button 
+            Text="Share"
+            Grid.Row="16"
+            Grid.Column="2">
+       </Button>
+
     </Grid>
    </StackLayout>  
 </ContentPage>

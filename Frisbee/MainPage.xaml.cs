@@ -6,9 +6,16 @@ namespace Frisbee
 {
     public partial class MainPage : ContentPage
     {
+
         public MainPage()
         {
+
             InitializeComponent();
+
+
+            HelloMessage.Text = "Hello " + App.Username + "!";
         }
+
+
     }
 }
