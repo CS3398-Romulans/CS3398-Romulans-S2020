@@ -38,6 +38,7 @@
 
        <Button
            x:Name="CameraButton"
+           Clicked="CameraButtonClicked"
            Text= "Camera"
            Grid.Row="16"
            Grid.Column="1">
