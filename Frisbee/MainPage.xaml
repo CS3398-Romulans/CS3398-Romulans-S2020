@@ -29,18 +29,23 @@
       </Label>
 
        <Button
+           x:Name="GalleryButton"
+           Clicked="CameraButtonClicked"
            Text="Gallery"
            Grid.Row="16"
            Grid.Column="0">
        </Button>
 
        <Button
+           x:Name="CameraButton"
+           Clicked="CameraButtonClicked"
            Text= "Camera"
            Grid.Row="16"
            Grid.Column="1">
         </Button>
 
-       <Button 
+       <Button
+           x:Name="ShareButton"
             Text="Share"
             Grid.Row="16"
             Grid.Column="2">
