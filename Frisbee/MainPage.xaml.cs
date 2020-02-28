@@ -27,6 +27,14 @@ namespace Frisbee
             }
         }
 
+        void ShareButtonClicked(System.Object sender, System.EventArgs e)
+        {
+        }
+
+        void GalleryButtonClicked(System.Object sender, System.EventArgs e)
+        {
+
+        }
 
     }
 }
