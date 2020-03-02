@@ -89,8 +89,7 @@ This code segment here is used to create buttons that are used to navigate the S
     }
 }
 ```
-This code segment above allows the mainPage public partial class to interact with the gallery class when the gallery button is clicked. A new gallery object is created when the button is pressed in MainPage.xaml.cs. 
-<Commit b34e98ca33fb178012b740c4eed8a190a188e048: Main Page navigation>
+This code segment above allows the mainPage public partial class to interact with the gallery class when the gallery button is clicked. A new gallery object is created when the button is pressed in MainPage.xaml.cs.<commit b34e98ca33fb178012b740c4eed8a190a188e048: Main Page navigation>
 
 ## Features
 List of features ready and TODOs for future development
