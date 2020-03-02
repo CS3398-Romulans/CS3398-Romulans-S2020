@@ -73,8 +73,7 @@ This code segments creates a label called HelloMessage which displays a welcome 
         VerticalOptions="Start">
     </Button>
 ```
-This here is used throughout our SharePage files. Done to navigate through each sharing platform option as well as previous pages in the application
-
+This code segment here is used to create buttons that are used to navigate the Share Page of the application. The Share Page is where a user has the option to navigate to their choice of platform to upload an output from our application. <commit 2b340ca4394c32b7db421f0447029ae17da34b2b: Share Page>
 
 ## Features
 List of features ready and TODOs for future development
