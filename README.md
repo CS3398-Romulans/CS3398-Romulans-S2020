@@ -104,6 +104,7 @@ To-do list:
 + Allow users to save pictures
 + Tyler - Set up Camera to take multiple pictures in succession and concatenate them together
 + share created gifs across sharing services
++ Gisele - Set up language support 
 
 ## Status
 Project is: _in progress_
