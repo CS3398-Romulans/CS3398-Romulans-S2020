@@ -11,6 +11,7 @@
         <ColumnDefinition Width="2*" />
         <ColumnDefinition Width="*" />
       </Grid.ColumnDefinitions>
+      
 
       <Label Text="Frisbee" HorizontalOptions="Center"></Label>
 
@@ -30,7 +31,7 @@
 
        <Button
            x:Name="GalleryButton"
-           Clicked="CameraButtonClicked"
+           Clicked="GalleryButtonClicked"
            Text="Gallery"
            Grid.Row="16"
            Grid.Column="0">
@@ -46,9 +47,10 @@
 
        <Button
            x:Name="ShareButton"
-            Text="Share"
-            Grid.Row="16"
-            Grid.Column="2">
+           Clicked="ShareButtonClicked"
+           Text="Share"
+           Grid.Row="16"
+           Grid.Column="2">
        </Button>
 
     </Grid>
