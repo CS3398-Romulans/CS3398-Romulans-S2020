@@ -62,8 +62,19 @@ This segment creates a MediaCameraOptions objects which is called when the Camer
 
       </Label>
 ```
-
 This code segments creates a label called HelloMessage which displays a welcome message with the users name after it being inputed.The message is displayed in the center of the users screen along with buttons at the very bottom. <commit 1aea3fbc0545f42cb6e4ac39e37b8ff44e196e64: Main Page UI>
+
+* Irene - using Xamarin, established buttons for SharePage :
+```
+   <Button
+        Text="Back"
+        Clicked="BackButtonClicked"
+        HorizontalOptions="Start"
+        VerticalOptions="Start">
+    </Button>
+```
+This here is used throughout our SharePage files. Done to navigate through each sharing platform option as well as previous pages in the application
+
 
 ## Features
 List of features ready and TODOs for future development
