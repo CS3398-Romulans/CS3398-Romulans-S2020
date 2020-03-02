@@ -12,11 +12,12 @@ namespace Frisbee
             InitializeComponent();
         }
 
-        void BackButtonClicked(System.Object sender, System.EventArgs e)
+        async void BackButtonClicked(System.Object sender, System.EventArgs e)
         {
+            await Navigation.PushModalAsync(new MainPage());
         }
 
-        void FACEBOOKButtonClicked(Object sender, EventArgs e)
+        void FacebookButtonClicked(Object sender, EventArgs e)
         {
 
         }

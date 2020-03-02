@@ -29,8 +29,6 @@
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
 	<string>Frisbee</string>
-	<key>XSAppIconAssets</key>
-	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>NSCameraUsageDescription</key>
 	<string>This app needs to access the camera to take photos</string>
 	<key>NSPhotoLibraryUsageDescription</key>
@@ -39,5 +37,7 @@
 	<string>This app needs access to the photo gallery.</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.Romulans.Frisbee</string>
+	<key>XSAppIconAssets</key>
+	<string>Assets.xcassets/AppIcon.appiconset</string>
 </dict>
 </plist>

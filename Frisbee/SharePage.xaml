@@ -12,7 +12,7 @@ x:Class="Frisbee.SharePage">
 
     <Button
         Text= "Facebook"
-        Clicked="FACEBOOKButtonClicked"
+        Clicked="FacebookButtonClicked"
         HorizontalOptions="Center"
         VerticalOptions="Center"
     ></Button>
