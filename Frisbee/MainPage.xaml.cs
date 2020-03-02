@@ -27,15 +27,14 @@ namespace Frisbee
             }
         }
 
-        async void ShareButtonClicked(System.Object sender, System.EventArgs e) { }
-        //{
-        //    await Navigation.PushModalAsync(new SharePage());
-        //}
+        async void ShareButtonClicked(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new SharePage());
+        }
 
         async void GalleryButtonClicked(System.Object sender, System.EventArgs e)
         {
             await Navigation.PushModalAsync(new Gallery());
         }
-
     }
 }

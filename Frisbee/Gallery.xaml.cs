@@ -12,6 +12,11 @@ namespace Frisbee
             InitializeComponent();
 
         }
+
+        async void BackButtonClicked(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new MainPage());
+        }
     }
 }
 
