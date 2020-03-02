@@ -43,6 +43,7 @@ The purpose of this project is to create and share awesome gif images made by **
             }
         }
 ```
+This segment creates a MediaCameraOptions objects which is called when the CameraButtonClicked Event is called, the resulting media options object is passed to an async TakePhoto method which uses the mobile devices native camera to take a picture which is then sent back to the MainPage. <Commit 8789ad840e588248b51c3ff7e7977c77c0958610: Working Camera Access>
 
 ## Features
 List of features ready and TODOs for future development
@@ -52,9 +53,9 @@ List of features ready and TODOs for future development
 
 
 To-do list:
-* Allow users to save pictures 
-* Set up Camera to take multiple pictures in succession and concatenate them together
-* share created gifs across sharing services
++ Allow users to save pictures
++ Tyler - Set up Camera to take multiple pictures in succession and concatenate them together
++ share created gifs across sharing services
 
 ## Status
 Project is: _in progress_
