@@ -75,6 +75,23 @@ This code segments creates a label called HelloMessage which displays a welcome 
 ```
 This code segment here is used to create buttons that are used to navigate the Share Page of the application. The Share Page is where a user has the option to navigate to their choice of platform to upload an output from our application. <commit 2b340ca4394c32b7db421f0447029ae17da34b2b: Share Page>
 
+* Gisele - Using Xamarin, updated the Main Page navigation :
+```
+  namespace Frisbee
+{
+    public partial class Gallery : ContentPage
+    {
+        public Gallery()
+        {
+            InitializeComponent();
+
+        }
+    }
+}
+```
+This code segment above allows the mainPage public partial class to interact with the gallery class when the gallery button is clicked. A new gallery object is created when the button is pressed in MainPage.xaml.cs. 
+<Commit b34e98ca33fb178012b740c4eed8a190a188e048: Main Page navigation>
+
 ## Features
 List of features ready and TODOs for future development
 * Tyler - Ability to Log in and Take pictures with the native phone camera
