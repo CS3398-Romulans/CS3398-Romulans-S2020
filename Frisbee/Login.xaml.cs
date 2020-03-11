@@ -17,5 +17,10 @@ namespace Frisbee
             App.Username = this.Username.Text;
             await Navigation.PushModalAsync( new MainPage());
         }
+
+        async void GuestLogin(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new MainPage());
+        }
     }
 }
