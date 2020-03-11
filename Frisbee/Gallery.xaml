@@ -5,7 +5,13 @@
 
         <StackLayout BackgroundColor="#f5f5f5">
 
-            <Button x:Name = "BackButton" Clicked="BackButtonClicked" Text="Back" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
+            <BoxView BackgroundColor="#f5f5f5"/>
+
+            <Button x:Name = "BackButton"
+                    Clicked="BackButtonClicked"
+                    Text="Back"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="StartAndExpand">
             </Button>
 
         </StackLayout>
