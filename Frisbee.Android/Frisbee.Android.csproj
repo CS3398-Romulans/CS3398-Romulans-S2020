@@ -52,16 +52,8 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <PackageReference Include="Xamarin.Forms" Version="4.5.0.530" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.2" />
-=======
-    <PackageReference Include="Xamarin.Forms" Version="4.5.0.356" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.1" />
-    <PackageReference Include="Plugin.FacebookClient">
-      <Version>2.2.1</Version>
-    </PackageReference>
->>>>>>> Develop
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -90,7 +82,6 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
-<<<<<<< HEAD
     <AndroidResource Include="Resources\drawable\ShareButtonIcon.png">
       <SubType></SubType>
       <Generator></Generator>
@@ -115,15 +106,6 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-=======
-    <AndroidResource Include="Resources\values\strings.xml">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\drawable\" />
->>>>>>> Develop
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Frisbee\Frisbee.csproj">

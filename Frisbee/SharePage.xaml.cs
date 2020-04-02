@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using Plugin.FacebookClient;
+
 using Xamarin.Forms;
 
 namespace Frisbee
@@ -17,10 +17,8 @@ namespace Frisbee
             await Navigation.PushModalAsync(new MainPage());
         }
 
-        async void FacebookButtonClicked(Object sender, EventArgs e)
+        void FacebookButtonClicked(Object sender, EventArgs e)
         {
-            FacebookResponse<bool> response = await CrossFacebookClient.Current.LoginAsync(new string[] { "email", "public_profile" });
-
 
         }
 
