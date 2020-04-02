@@ -4,12 +4,17 @@
                  x:Class="Frisbee.Login"  
                  BackgroundImage="logo.jpg">
 
-
-
         <ContentPage.Content>  
             <StackLayout Orientation="Vertical" Padding="30" Spacing="40">  
-                <BoxView HeightRequest="10"/>  
-                <Image HorizontalOptions="Center" WidthRequest="300" Source="maco.jpg"/>  
+                <BoxView HeightRequest="10"/>
+
+                <Label Text="Welcome to Pendulum!" HorizontalOptions="Center" FontSize="25"
+                       FontAttributes="Bold"> </Label>
+
+
+                <Image HorizontalOptions="Center" WidthRequest="300" Source="maco.jpg"/>
+
+
                 <Frame BackgroundColor="#F5F5F5" HasShadow="True">  
                     <StackLayout Orientation="Vertical" Spacing="10">  
                         <Entry x:Name="Username" Text="{Binding Email}" Placeholder=""   
@@ -21,8 +26,15 @@
                                IsPassword="True"  
                                TextColor="Black"/>  
                     </StackLayout>  
-                </Frame>  
-                <Button Clicked="LoginButtonClicked" Text="Login" TextColor="White"  
+                </Frame>
+
+
+                <Button Clicked="LoginButtonClicked" Text="Login" TextColor="Black"  
+                        FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                        BackgroundColor="#F5F5F5" />
+                <Label Text="Or" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold"> </Label>
+
+                <Button Clicked="GuestLogin" Text="Continue As Guest" TextColor="Black"  
                         FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
                         BackgroundColor="#F5F5F5" />  
             </StackLayout>  
