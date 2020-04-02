@@ -4,32 +4,39 @@ x:Class="Frisbee.SharePage">
 <StackLayout BackgroundColor="#f5f5f5">
     <BoxView BackgroundColor="#f5f5f5"/>
 
-    <Button
-        Text="Back"
-        Clicked="BackButtonClicked"
-        HorizontalOptions="Start"
-        VerticalOptions="Start">
-    </Button>
+        <Button
+            Text="Back"
+            Clicked="BackButtonClicked"
+            HorizontalOptions="Start"
+            VerticalOptions="Start">
+        </Button>
 
-    <Button
-        Text= "Facebook"
-        Clicked="FacebookButtonClicked"
-        HorizontalOptions="Center"
-        VerticalOptions="Center"
-    ></Button>
+        <ImageButton
+            Source="facebookIcon.png"
+            Clicked="FacebookButtonClicked"
+            WidthRequest="50"
+            HeightRequest="50"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+        ></ImageButton>
     
-    <Button Text="Instagram"
-        Clicked="InstagramButtonClicked"
-        HorizontalOptions="Center"
-        VerticalOptions="Center"
-        ></Button> 
+        <ImageButton
+            Source="InstagramButtonIcon"
+            Clicked="InstagramButtonClicked"
+            WidthRequest="50"
+            HeightRequest="50"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+        ></ImageButton> 
 
-<Button
-    Text="Twitter"
-    Clicked="TwitterButtonClicked"
-    HorizontalOptions="Center"
-    VerticalOptions="Center"
-    ></Button>
+        <ImageButton
+            Source="twitterIcon.png"
+            Clicked="TwitterButtonClicked"
+            WidthRequest="50"
+            HeightRequest="50"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+        ></ImageButton>
 
 </StackLayout>
 

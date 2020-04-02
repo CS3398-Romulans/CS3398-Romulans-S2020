@@ -115,6 +115,7 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Image.imageset\Contents.json" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -125,8 +126,8 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.5.0.356" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.530" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.2" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -134,5 +135,16 @@
       <Project>{7AFF3AD7-0DE4-46CB-B724-673EEBE9BD66}</Project>
       <Name>Frisbee</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\CameraButtonIcon.png" />
+    <AndroidResource Include="Resources\drawable\facebookIcon.png" />
+    <AndroidResource Include="Resources\drawable\galleryButtonIcon.png" />
+    <AndroidResource Include="Resources\drawable\InstagramButtonIcon.png" />
+    <AndroidResource Include="Resources\drawable\ShareButtonIcon.png" />
+    <AndroidResource Include="Resources\drawable\twitterIcon.png" />
   </ItemGroup>
 </Project>

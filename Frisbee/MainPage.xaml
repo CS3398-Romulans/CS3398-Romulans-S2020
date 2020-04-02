@@ -19,41 +19,47 @@
            <Label Text="Frisbee" HorizontalOptions="Center"></Label>
 
            <Label
-            x:Name= "HelloMessage"
-            Text="Hello There"
-            FontSize="30"
-            FontFamily="HelveticaNeue"
-            Grid.Row="5"
-            Grid.Column="1"
-            HorizontalOptions="Center"
-            VerticalOptions="CenterAndExpand"
+                x:Name= "HelloMessage"
+                Text="Hello There"
+                FontSize="30"
+                FontFamily="HelveticaNeue"
+                Grid.Row="5"
+                Grid.Column="1"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
             >
 
            </Label>
 
-           <Button
-            x:Name="GalleryButton"
-            Clicked="GalleryButtonClicked"
-            Text="Gallery"
-            Grid.Row="16"
-            Grid.Column="0">
-           </Button>
+           <ImageButton
+                Source="galleryButtonicon.png"
+                x:Name="GalleryButton"
+                Clicked="GalleryButtonClicked"
+                WidthRequest="20"
+                HeightRequest="20"
+                Grid.Row="16"
+                Grid.Column="0">
+           </ImageButton>
 
-           <Button
-            x:Name="CameraButton"
-            Clicked="CameraButtonClicked"
-            Text= "Camera"
-            Grid.Row="16"
-            Grid.Column="1">
-           </Button>
+           <ImageButton
+                Source="CameraButtonIcon.png"
+                x:Name="CameraButton"
+                Clicked="CameraButtonClicked"
+                WidthRequest="20"
+                HeightRequest="20"
+                Grid.Row="16"
+                Grid.Column="1">
+           </ImageButton>
 
-           <Button
-            x:Name="ShareButton"
-            Clicked="ShareButtonClicked"
-            Text="Share"
-            Grid.Row="16"
-            Grid.Column="2">
-           </Button>
+           <ImageButton
+                Source="ShareButtonIcon.png"
+                x:Name="ShareButton"
+                Clicked="ShareButtonClicked"
+                WidthRequest="20"
+                HeightRequest="20"
+                Grid.Row="16"
+                Grid.Column="2">
+           </ImageButton>
 
         </Grid>
    </StackLayout>  
