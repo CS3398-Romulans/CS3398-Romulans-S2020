@@ -26,7 +26,7 @@
                 Grid.Row="5"
                 Grid.Column="1"
                 HorizontalOptions="Center"
-                VerticalOptions="CenterAndExpand"
+                VerticalOptions="Center"
             >
 
            </Label>
@@ -35,8 +35,8 @@
                 Source="galleryButtonicon.png"
                 x:Name="GalleryButton"
                 Clicked="GalleryButtonClicked"
-                WidthRequest="20"
-                HeightRequest="20"
+                WidthRequest="150"
+                HeightRequest="150"
                 Grid.Row="16"
                 Grid.Column="0">
            </ImageButton>
@@ -45,8 +45,8 @@
                 Source="CameraButtonIcon.png"
                 x:Name="CameraButton"
                 Clicked="CameraButtonClicked"
-                WidthRequest="20"
-                HeightRequest="20"
+                WidthRequest="150"
+                HeightRequest="150"
                 Grid.Row="16"
                 Grid.Column="1">
            </ImageButton>
@@ -55,8 +55,8 @@
                 Source="ShareButtonIcon.png"
                 x:Name="ShareButton"
                 Clicked="ShareButtonClicked"
-                WidthRequest="20"
-                HeightRequest="20"
+                WidthRequest="150"
+                HeightRequest="150"
                 Grid.Row="16"
                 Grid.Column="2">
            </ImageButton>
