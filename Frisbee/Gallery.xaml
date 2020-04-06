@@ -14,6 +14,16 @@
                     HorizontalOptions="StartAndExpand">
             </Button>
 
+            <TableView Intent="Data">
+                <TableRoot>
+                    <TableSection Title="Galley">
+                        <ViewCell>
+                            
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+
         </StackLayout>
 
 

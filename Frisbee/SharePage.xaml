@@ -14,8 +14,8 @@ x:Class="Frisbee.SharePage">
         <ImageButton
             Source="facebookIcon.png"
             Clicked="FacebookButtonClicked"
-            WidthRequest="50"
-            HeightRequest="50"
+            WidthRequest="100"
+            HeightRequest="100"
             HorizontalOptions="Center"
             VerticalOptions="Center"
         ></ImageButton>
@@ -23,17 +23,17 @@ x:Class="Frisbee.SharePage">
         <ImageButton
             Source="InstagramButtonIcon"
             Clicked="InstagramButtonClicked"
-            WidthRequest="50"
-            HeightRequest="50"
+            WidthRequest="100"
+            HeightRequest="100"
             HorizontalOptions="Center"
-            VerticalOptions="Center"
+            VerticalOptions="CenterAndExpand"
         ></ImageButton> 
 
         <ImageButton
             Source="twitterIcon.png"
             Clicked="TwitterButtonClicked"
-            WidthRequest="50"
-            HeightRequest="50"
+            WidthRequest="100"
+            HeightRequest="100"
             HorizontalOptions="Center"
             VerticalOptions="Center"
         ></ImageButton>

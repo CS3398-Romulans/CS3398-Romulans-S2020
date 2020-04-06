@@ -7,7 +7,8 @@ using Xamarin.Forms;
 namespace Frisbee
 {
     public partial class MainPage : ContentPage
-    {
+    { 
+
         public MainPage()
         {
             InitializeComponent();
@@ -19,7 +20,7 @@ namespace Frisbee
         {
             try
             {
-                var photo = await Plugin.Media.CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions() { });
+                var photo = await Plugin.Media.CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions() { SaveToAlbum = true});
             }
             catch (Exception w)
             {
