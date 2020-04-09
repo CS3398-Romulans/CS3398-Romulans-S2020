@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Frisbee
@@ -17,9 +17,13 @@ namespace Frisbee
             await Navigation.PushModalAsync(new MainPage());
         }
 
-        void FacebookButtonClicked(Object sender, EventArgs e)
+        async void FacebookButtonClicked(Object sender, EventArgs e)
         {
-
+            await Share.RequestAsync(new ShareFileRequest
+            {
+                Title = "Hello",
+                File = new ShareFile("Ultimate.png")
+            });
         }
 
         void InstagramButtonClicked(Object sender, EventArgs e)

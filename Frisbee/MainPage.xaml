@@ -33,7 +33,7 @@
 
            <Button
             x:Name="GalleryButton"
-            Clicked="GalleryButtonClicked"
+            Clicked="G_Clicked"
             Text="Gallery"
             Grid.Row="16"
             Grid.Column="0">

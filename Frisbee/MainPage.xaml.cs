@@ -34,7 +34,7 @@ namespace Frisbee
         }
 
 
-        async void GalleryButtonClicked(object sender, EventArgs e)
+        public async void G_Clicked(object sender, System.EventArgs e)
         {
             await Navigation.PushModalAsync(new Gallery());
 
