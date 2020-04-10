@@ -5,13 +5,6 @@ x:Class="Frisbee.SharePage">
     <BoxView BackgroundColor="#f5f5f5"/>
 
     <Button
-        Text="Back"
-        Clicked="BackButtonClicked"
-        HorizontalOptions="Start"
-        VerticalOptions="Start">
-    </Button>
-
-    <Button
         Text= "Facebook"
         Clicked="FacebookButtonClicked"
         HorizontalOptions="Center"

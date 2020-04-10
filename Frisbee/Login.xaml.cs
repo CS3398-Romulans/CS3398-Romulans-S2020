@@ -15,7 +15,7 @@ namespace Frisbee
          async void LoginButtonClicked(object sender, EventArgs e)
         {
             App.Username = this.Username.Text;
-            await Navigation.PushModalAsync( new MainPage());
+            await Navigation.PushModalAsync(new NewMasterDetailPage());
         }
     }
 }

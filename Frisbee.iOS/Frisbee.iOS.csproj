@@ -135,4 +135,11 @@
       <Name>Frisbee</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\drawable\CameraButtonIcon.png" />
+    <BundleResource Include="Resources\drawable\hamburger.png" />
+  </ItemGroup>
 </Project>

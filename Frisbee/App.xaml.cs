@@ -12,7 +12,7 @@ namespace Frisbee
         {
             InitializeComponent();
 
-            MainPage = new Login();
+            MainPage = new NewMasterDetailPage();
         }
 
         protected override void OnStart()
