@@ -2,7 +2,7 @@
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using Frisbee.Services;
 namespace Frisbee
 {
     public partial class App : Application
@@ -23,7 +23,7 @@ namespace Frisbee
 							_Instance = new App();
 
 							_Instance.OAuthSettings =
-								new FacebookOAuthToken(
+								new OAuthSettings(
 									clientId: FacebookAuthority.getInstance().clientID,       // your OAuth2 client id 
 									scope: "email",         // The scopes for the particular API you're accessing. The format for this will vary by API.
 									authorizeUrl: "https://www.facebook.com/dialog/oauth/",     // the auth URL for the service
@@ -38,7 +38,7 @@ namespace Frisbee
 			}
 		}
 
-		public FacebookOAuthToken OAuthSettings { get; private set; }
+		public OAuthSettings OAuthSettings{ get; private set; }
 
 		NavigationPage _NavPage;
 
