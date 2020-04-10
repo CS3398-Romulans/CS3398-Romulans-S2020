@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Frisbee.ViewModels;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+
 namespace Frisbee.Services
 {
     public class FacebookService
