@@ -1,9 +1,12 @@
 ﻿using System;
-using System.Diagnostics;
+using Frisbee.Services;
 using System.Net.Http;
 using System.Threading.Tasks;
-
+using Xamarin.Auth;
 using Xamarin.Forms;
+using Frisbee.Models;
+using Newtonsoft.Json;
+using Frisbee.ViewModels;
 
 namespace Frisbee
 {
@@ -16,27 +19,29 @@ namespace Frisbee
         public Login()
         {
             InitializeComponent();
+
             apiRequest =
                  "https://www.facebook.com/v6.0/dialog/oauth?client_id="
-                 + ApiAuthority.getInstance().facebookClientID
+                 + FacebookAuthority.getInstance().clientID
                  + "&display=popup&respone_type=token&redirect_uri=https://www.facebook.com/connect/login_success.html";
         }
+
         void LoginButtonClicked(object sender, EventArgs e)
         {
-            facebookWebView = new WebView
+           /* facebookWebView = new WebView
             {
                 Source = apiRequest,
-               
+
             };
 
             facebookWebView.Navigated += WebViewOnNavigated;
-            facebookWebView.Navigating += webViewOnNavigating;
+            facebookWebView.Navigating += webViewOnNavigating;*/
 
-            ToolbarItems.Add(new ToolbarItem("Back", "BackIcon.png", () => { facebookWebView.GoBack(); }));
+           
 
 
-            Content = facebookWebView;
-            
+           //Content = facebookWebView;
+
 
 
             //await Navigation.PushModalAsync( new MainPage());
@@ -44,6 +49,7 @@ namespace Frisbee
 
         public async void webViewOnNavigating(object sender, WebNavigatingEventArgs e)
         {
+            
             //facebookWebView.IsVisible = false;
             if (e.Url.StartsWith("http://www.facebook.com/"))
             {
@@ -55,16 +61,17 @@ namespace Frisbee
 
         public async void WebViewOnNavigated(object sender, WebNavigatedEventArgs e)
         {
-          
+
             var accessToken = ExtractAccessTokenFromUrl(e.Url);
-           
+
             if (accessToken != "")
             {
+                var cm = BindingContext as FacebookViewModel;
                 await GetFacebookProfileAsync(accessToken);
-               
+
             }
 
-            
+
         }
 
         public string ExtractAccessTokenFromUrl(string url)
@@ -77,7 +84,7 @@ namespace Frisbee
 
                 return accessToken;
             }
-            return "";
+            return string.Empty;
         }
 
         public async Task GetFacebookProfileAsync(string accessToken)
@@ -90,13 +97,10 @@ namespace Frisbee
             var httpClient = new HttpClient();
 
             facebookJsonData = await httpClient.GetStringAsync(requestUrl);
-            
+
         }
-
-       
-
-     
-
-
     }
 }
+
+     
+    

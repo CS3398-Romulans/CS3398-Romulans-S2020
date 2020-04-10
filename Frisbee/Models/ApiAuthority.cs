@@ -1,11 +1,10 @@
 ﻿using System;
-namespace Frisbee
+namespace Frisbee.Models
+
 {
-    public class ApiAuthority
+    public abstract class ApiAuthority
     {
-
-
-        private ApiAuthority() { }
+        public ApiAuthority() { }
 
         #region Singleton
         private static ApiAuthority obj;
@@ -19,7 +18,7 @@ namespace Frisbee
 
         #endregion
 
-        public string facebookClientID = "197556254831511";
-
+        public string ClientID = "197556254831511";
+        public string kClientScope = "email";
     }
 }
