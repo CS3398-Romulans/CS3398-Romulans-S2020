@@ -12,7 +12,7 @@ namespace Frisbee
         {
             InitializeComponent();
 
-            HelloMessage.Text = "Hello " + App.Username + "!";
+           
         }
 
         private async void CameraButtonClicked(object sender, EventArgs e)

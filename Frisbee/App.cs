@@ -5,8 +5,8 @@ using Xamarin.Forms.Xaml;
 using Frisbee.Services;
 namespace Frisbee
 {
-    public partial class App : Application
-    {
+	public partial class App : Application
+	{
 		// just a singleton pattern so I can have the concept of an app instance
 		static volatile App _Instance;
 		static object _SyncRoot = new Object();
@@ -29,7 +29,7 @@ namespace Frisbee
 									authorizeUrl: "https://www.facebook.com/dialog/oauth/",     // the auth URL for the service
 									redirectUrl: "https://www.facebook.com/connect/login_success.html");   // the redirect URL for the service
 
-						
+
 						}
 					}
 				}
@@ -38,13 +38,13 @@ namespace Frisbee
 			}
 		}
 
-		public OAuthSettings OAuthSettings{ get; private set; }
+		public OAuthSettings OAuthSettings { get; private set; }
 
 		NavigationPage _NavPage;
 
 		public Page GetMainPage()
 		{
-			var mainPage = new MainPage();
+			var mainPage = new Login();
 
 			_NavPage = new NavigationPage(mainPage);
 
