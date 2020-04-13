@@ -24,7 +24,7 @@ namespace OAuth2Demo.XForms.iOS
                 authorizeUrl: new Uri(FacebookAuthority.instance.authorizeUrl), // the auth URL for the service
                 redirectUrl: new Uri(FacebookAuthority.instance.redirectUrl)); // the redirect URL for the service
 
-            auth.Completed += (sender, eventArgs) => {
+            auth.Completed += async (sender, eventArgs) => {
                 // We presented the UI, so it's up to us to dimiss it on iOS.
                 App.Instance.SuccessfulLoginAction.Invoke();
 
@@ -32,6 +32,7 @@ namespace OAuth2Demo.XForms.iOS
                 {
                     // Use eventArgs.Account to do wonderful things
                     App.Instance.SaveToken(eventArgs.Account.Properties["access_token"]);
+                    await App.Instance.facebookViewModel.SetFacebookUserProfileAsync(App.Instance.Token);
                 }
                 else
                 {

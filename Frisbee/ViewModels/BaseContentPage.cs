@@ -13,8 +13,10 @@ namespace Frisbee.ViewModels
 
             if (!App.Instance.IsAuthenticated)
             {
+               
                 Navigation.PushModalAsync(new Login());
             }
+          
         }
     }
 }

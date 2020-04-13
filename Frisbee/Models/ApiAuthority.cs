@@ -1,13 +1,11 @@
-﻿using System;
-namespace Frisbee.Models
+﻿namespace Frisbee.Models
 
 {
     public abstract class ApiAuthority
     {
-       
-        public string clientID;
-        public string clientScope;
-        public string authorizeUrl;
-        public string redirectUrl;
+        string redirectUrl;
+        string authorizeUrl;
+        string clientScope;
+        string clientID;
     }
 }

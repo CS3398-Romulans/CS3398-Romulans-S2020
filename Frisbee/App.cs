@@ -1,7 +1,6 @@
 ﻿using Frisbee.Models;
 using System;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 using Frisbee.Services;
 using Frisbee.ViewModels;
 
@@ -11,28 +10,32 @@ namespace Frisbee
 	{
 		// just a singleton pattern so I can have the concept of an app instance
 		static volatile App _Instance;
-		static object _SyncRoot = new Object();
+		static object _SyncRoot = new object();
+		
+
+
 		public static App Instance
 		{
-			get
+            get
 			{
 				if (_Instance == null)
 				{
 					lock (_SyncRoot)
 					{
 						if (_Instance == null)
-						{
+                        {
 							_Instance = new App();
+							
+						    _Instance.oAuthSettings =
 
-							_Instance.OAuthSettings =
-								new OAuthSettings(
-									clientId: FacebookAuthority.instance.clientID,       // your OAuth2 client id 
-									scope: "email",         // The scopes for the particular API you're accessing. The format for this will vary by API.
-									authorizeUrl: "https://www.facebook.com/dialog/oauth/",     // the auth URL for the service
-									redirectUrl: "https://www.facebook.com/connect/login_success.html");   // the redirect URL for the service
+							new OAuthSettings(
+								clientId: "197556254831511",       // your OAuth2 client id 
+								scope: "email",         // The scopes for the particular API you're accessing. The format for this will vary by API.
+								authorizeUrl: "https://www.facebook.com/dialog/oauth/",     // the auth URL for the service
+								redirectUrl: "https://www.facebook.com/connect/login_success.html");   // the redirect URL for the service
+							
 
-
-						}
+                       }
 					}
 				}
 
@@ -40,13 +43,14 @@ namespace Frisbee
 			}
 		}
 
-		public OAuthSettings OAuthSettings { get; private set; }
+		public FacebookViewModel facebookViewModel = new FacebookViewModel();
+		public OAuthSettings oAuthSettings;
 
 		NavigationPage _NavPage;
 
 		public Page GetMainPage()
 		{
-			var mainPage = new ProfilePage();
+			var mainPage = new MainPage();
 
 			_NavPage = new NavigationPage(mainPage);
 
@@ -55,7 +59,7 @@ namespace Frisbee
 
 		public bool IsAuthenticated
 		{
-			get { return !string.IsNullOrWhiteSpace(_Token); }
+			get { return facebookViewModel.FacebookProfile != null; }
 		}
 
 		private string _Token;

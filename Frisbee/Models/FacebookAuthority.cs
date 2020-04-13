@@ -4,14 +4,14 @@ using System.Text;
 
 namespace Frisbee.Models
 {
-    public class FacebookAuthority : ApiAuthority
+    public class FacebookAuthority
     {
-
+       
 
         #region Singleton
         public static FacebookAuthority instance;
 
-        public static ApiAuthority getInstance()
+        public static FacebookAuthority getInstance()
         {
             if (instance == null)
                 instance = new FacebookAuthority();

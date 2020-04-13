@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Frisbee.ViewModels
 {
-    class FacebookViewModel
+    public class FacebookViewModel
     {
         private FacebookProfile _facebookProfile;
 

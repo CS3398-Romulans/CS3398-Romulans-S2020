@@ -6,13 +6,13 @@ namespace Frisbee.Services
 {
     public class OAuthSettings
     {
-		public OAuthSettings(
+        public OAuthSettings(
 			string clientId,
 			string scope,
 			string authorizeUrl,
 			string redirectUrl)
 		{
-			ClientId = clientId;
+            ClientId = clientId;
 			Scope = scope;
 			AuthorizeUrl = authorizeUrl;
 			RedirectUrl = redirectUrl;

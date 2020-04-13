@@ -22,7 +22,6 @@
     <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Remove="Login.cs" />
     <Compile Remove="CameraPage.cs" />
     <Compile Remove="SharePage.cs" />
   </ItemGroup>
