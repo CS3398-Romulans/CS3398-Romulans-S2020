@@ -12,10 +12,19 @@ namespace Frisbee
 		static volatile App _Instance;
 		static object _SyncRoot = new object();
 		
+        public App()
+        {
+			MessagingCenter.Subscribe<App, string>(this, "Authenticated", async (sender, args) =>
+			{
+				System.Diagnostics.Debug.WriteLine(args + " Made it this far");
+				await facebookViewModel.SetFacebookUserProfileAsync(args);
+			});
 
+        }
 
-		public static App Instance
+	public static App Instance
 		{
+
             get
 			{
 				if (_Instance == null)
@@ -41,6 +50,7 @@ namespace Frisbee
 
 				return _Instance;
 			}
+          
 		}
 
 		public FacebookViewModel facebookViewModel = new FacebookViewModel();
@@ -59,10 +69,10 @@ namespace Frisbee
 
 		public bool IsAuthenticated
 		{
-			get { return facebookViewModel.FacebookProfile != null; }
+			get { return !string.IsNullOrWhiteSpace(_Token); }
 		}
 
-		private string _Token;
+        private string _Token;
 
 		public string Token
 		{
@@ -74,7 +84,8 @@ namespace Frisbee
 			_Token = token;
 
 			// broadcast a message that authentication was successful
-			MessagingCenter.Send<App>(this, "Authenticated");
+			MessagingCenter.Send<App, string>(this, "Authenticated", token);
+			System.Diagnostics.Debug.WriteLine("Authenticated: " + _Token);
 		}
 
 		public Action SuccessfulLoginAction
@@ -84,6 +95,7 @@ namespace Frisbee
 				return new Action(() => _NavPage.Navigation.PopModalAsync());
 			}
 		}
+		
 	}
 }
 /*

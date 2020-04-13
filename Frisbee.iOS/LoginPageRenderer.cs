@@ -19,12 +19,13 @@ namespace OAuth2Demo.XForms.iOS
 
 
             var auth = new OAuth2Authenticator(
-                clientId: FacebookAuthority.instance.clientID, // your OAuth2 client id
-                scope: FacebookAuthority.instance.clientScope, // the scopes for the particular API you're accessing, delimited by "+" symbols
-                authorizeUrl: new Uri(FacebookAuthority.instance.authorizeUrl), // the auth URL for the service
-                redirectUrl: new Uri(FacebookAuthority.instance.redirectUrl)); // the redirect URL for the service
+                clientId: App.Instance.oAuthSettings.ClientId, // your OAuth2 client id
+                scope: App.Instance.oAuthSettings.Scope, // the scopes for the particular API you're accessing, delimited by "+" symbols
+                authorizeUrl: new Uri(App.Instance.oAuthSettings.AuthorizeUrl), // the auth URL for the service
+                redirectUrl: new Uri(App.Instance.oAuthSettings.RedirectUrl)); // the redirect URL for the service
 
-            auth.Completed += async (sender, eventArgs) => {
+            auth.Completed += (sender, eventArgs) =>
+            {
                 // We presented the UI, so it's up to us to dimiss it on iOS.
                 App.Instance.SuccessfulLoginAction.Invoke();
 
@@ -32,7 +33,7 @@ namespace OAuth2Demo.XForms.iOS
                 {
                     // Use eventArgs.Account to do wonderful things
                     App.Instance.SaveToken(eventArgs.Account.Properties["access_token"]);
-                    await App.Instance.facebookViewModel.SetFacebookUserProfileAsync(App.Instance.Token);
+                    //await App.Instance.facebookViewModel.SetFacebookUserProfileAsync(App.Instance.Token);
                 }
                 else
                 {

@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace Frisbee.ViewModels
 {
@@ -19,6 +20,7 @@ namespace Frisbee.ViewModels
             {
                 _facebookProfile = value;
                 OnPropertyChanged();
+                MessagingCenter.Send(this, "Successful_Login", FacebookProfile.FirstName);
             }
         }
 
@@ -27,6 +29,7 @@ namespace Frisbee.ViewModels
             var facebookServices = new FacebookService();
 
             FacebookProfile = await facebookServices.GetFacebookProfileAsync(accessToken);
+            
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

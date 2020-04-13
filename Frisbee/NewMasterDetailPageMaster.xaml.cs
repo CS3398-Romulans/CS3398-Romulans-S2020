@@ -33,7 +33,7 @@ namespace Frisbee
             {
                 MenuItems = new ObservableCollection<NewMasterDetailPageMenuItem>(new[]
                 {
-                    new NewMasterDetailPageMenuItem { Id = 0, Title = "Profile", TargetType = typeof(ProfilePage) },
+                    new NewMasterDetailPageMenuItem { Id = 0, Title = "Profile", TargetType = typeof(Profile) },
                     new NewMasterDetailPageMenuItem { Id = 1, Title = "Gallery", TargetType = typeof(Gallery)},
                     new NewMasterDetailPageMenuItem { Id = 2, Title = "Share", TargetType = typeof(SharePage) },
                     new NewMasterDetailPageMenuItem {Id = 3, Title = "Home", TargetType = typeof(NewMasterDetailPageDetail)}

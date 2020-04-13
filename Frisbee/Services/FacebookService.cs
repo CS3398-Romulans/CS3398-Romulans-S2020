@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Frisbee.ViewModels;
 using Newtonsoft.Json;
+using Xamarin.Forms;
 
 namespace Frisbee.Services
 {
@@ -14,7 +15,7 @@ namespace Frisbee.Services
             public async Task<FacebookProfile> GetFacebookProfileAsync(string accessToken)
             {
                 var requestUrl =
-                    "https://graph.facebook.com/v2.7/me/?fields=name,picture,work,website,religion,location,locale,link,cover,age_range,bio,birthday,devices,email,first_name,last_name,gender,hometown,is_verified,languages&access_token="
+                    "https://graph.facebook.com/v2.7/me/?fields=name&access_token="
                     + accessToken;
 
                 var httpClient = new HttpClient();
@@ -23,6 +24,9 @@ namespace Frisbee.Services
 
                 var facebookProfile = JsonConvert.DeserializeObject<FacebookProfile>(userJson);
 
+                System.Diagnostics.Debug.WriteLine(facebookProfile + ": Created");
+
+                
                 return facebookProfile;
             }
     }
