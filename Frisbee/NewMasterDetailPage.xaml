@@ -3,7 +3,8 @@
                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                   x:Class="Frisbee.NewMasterDetailPage"
                   xmlns:pages="clr-namespace:Frisbee"
-                  IconImageSource="hamburger.png">
+                  IconImageSource="hamburger.png"
+                  BackgroundColor="#f5f5f5">
     <MasterDetailPage.Master>
         <pages:NewMasterDetailPageMaster x:Name="MasterPage" />
     </MasterDetailPage.Master>

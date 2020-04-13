@@ -3,10 +3,15 @@
 
     <ScrollView>
 
-        <StackLayout BackgroundColor="#f5f5f5">
-
-            <BoxView BackgroundColor="#f5f5f5"/>
-
+        <StackLayout BackgroundColor="#f5f5f5" Margin="20,35,20,20">
+            <ListView>
+                <ListView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String></x:String>
+                        <x:String></x:String>
+                    </x:Array>
+                </ListView.ItemsSource>
+            </ListView>
 
         </StackLayout>
 
