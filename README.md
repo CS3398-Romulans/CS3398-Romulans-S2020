@@ -64,6 +64,34 @@ This segment creates a MediaCameraOptions objects which is called when the Camer
 ```
 This code segments creates a label called HelloMessage which displays a welcome message with the users name after it being inputed.The message is displayed in the center of the users screen along with buttons at the very bottom. <commit 1aea3fbc0545f42cb6e4ac39e37b8ff44e196e64: Main Page UI>
 
+Mario - Using a facade design pattern to create a slide out menu capability 
+
+```
+ public partial class NewMasterDetailPage : MasterDetailPage
+    {
+        public NewMasterDetailPage()
+        {
+            InitializeComponent();
+            MasterPage.ListView.ItemSelected += ListView_ItemSelected;
+        }
+
+        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var item = e.SelectedItem as NewMasterDetailPageMenuItem;
+            if (item == null)
+                return;
+
+            var page = (Page)Activator.CreateInstance(item.TargetType);
+            page.Title = item.Title;
+
+            Detail = new NavigationPage(page);
+            IsPresented = false;
+
+            MasterPage.ListView.SelectedItem = null;
+        }
+```
+
+This code segment here creates the "MasterDetailPage" class which is a master class to two content page classes, its subsystems, The two subsystems will contain the design for the menu in one page and the other will hold the details that are shown within the menu.
 * Irene - using Xamarin, established buttons for SharePage :
 ```
    <Button
