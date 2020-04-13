@@ -16,18 +16,19 @@ namespace Frisbee
         public NewMasterDetailPageDetail()
         {
             InitializeComponent();
+
+            CameraButton.Clicked += CameraButtonClicked;
         }
 
        private async void CameraButtonClicked(object sender, EventArgs e)
         {
-            try
-            {
-                var photo = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions() { SaveToAlbum = true}); ;
-            }
-            catch (Exception w)
-            {
-                throw new Exception(w.Message);
-            }
+          
+            var photo = await CrossMedia.Current.TakePhotoAsync(
+                new Plugin.Media.Abstractions.StoreCameraMediaOptions() {SaveToAlbum = true}); ;
+
+
+           if (photo !=null)
+                pic.Source = ImageSource.FromStream(() => { return photo.GetStream(); });
 
 
         }
