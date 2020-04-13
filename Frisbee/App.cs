@@ -50,7 +50,7 @@ namespace Frisbee
 
 		public Page GetMainPage()
 		{
-			var mainPage = new MainPage();
+			var mainPage = new NewMasterDetailPage();
 
 			_NavPage = new NavigationPage(mainPage);
 

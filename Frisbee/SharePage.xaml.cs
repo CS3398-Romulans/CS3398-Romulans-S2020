@@ -14,7 +14,7 @@ namespace Frisbee
 
         async void BackButtonClicked(System.Object sender, System.EventArgs e)
         {
-            await Navigation.PushModalAsync(new MainPage());
+            await Navigation.PushModalAsync(new NewMasterDetailPageMaster());
         }
 
         async void FacebookButtonClicked(Object sender, EventArgs e)
