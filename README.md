@@ -158,7 +158,7 @@ To-do list:
 + share created gifs across sharing services (Requires business Verification)
 + Allow Login to Twitter in addition to facebook 
 + Gisele - Set up language support 
-+ Irene - Button actions - ability to share to platforms given options listed
++ Irene - Profile page additional features
 
 ## Status
 Project is: _in progress_
