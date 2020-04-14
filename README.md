@@ -133,6 +133,7 @@ This code segment above allows the mainPage public partial class to interact wit
 ## Features
 List of features ready and TODOs for future development
 * Tyler - Ability to Log in and Take pictures with the native phone camera
+* Tyler - Login With Facebook and post pictures to a variety of applications(From Frisbee and native phone gallery)
 * Page navigation
 * Page Layout
 
@@ -140,7 +141,8 @@ List of features ready and TODOs for future development
 To-do list:
 + Allow users to save pictures
 + Tyler - Set up Camera to take multiple pictures in succession and concatenate them together
-+ share created gifs across sharing services
++ share created gifs across sharing services (Requires business Verification)
++ Allow Login to Twitter in addition to facebook 
 + Gisele - Set up language support 
 + Irene - Button actions - ability to share to platforms given options listed
 
@@ -151,4 +153,4 @@ Project is: _in progress_
 This project is inspired by Boomerang, a popular Instagram extension with a similar theme.
 
 ## Contact
-Created by [Irene Marmelejo](), [Gisele D'Abreu](), [Mario Gomez](), and [Tyler Carroll]() - Contact us for questions or support
+Created by [Irene Marmelejo](), [Gisele D'Abreu](), [Mario Gomez](), and [Tyler Carroll](https://github.com/Tyler-Carroll?tab=repositories) - Contact us for questions or support
