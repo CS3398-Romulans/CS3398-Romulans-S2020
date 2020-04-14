@@ -46,6 +46,43 @@ The purpose of this project is to create and share awesome gif images made by **
 ```
 This segment creates a MediaCameraOptions objects which is called when the CameraButtonClicked Event is called, the resulting media options object is passed to an async TakePhoto method which uses the mobile devices native camera to take a picture which is then sent back to the MainPage. <Commit 8789ad840e588248b51c3ff7e7977c77c0958610: Working Camera Access>
 
+
+*Tyler - Created a CustomRenderer for IOS which creates a webview of Facebook's login page.
+```
+    public override void ViewDidAppear(bool animated)
+        {
+            base.ViewDidAppear(animated);
+
+
+            var auth = new OAuth2Authenticator(
+                clientId: App.Instance.oAuthSettings.ClientId, // your OAuth2 client id
+                scope: App.Instance.oAuthSettings.Scope, // the scopes for the particular API you're accessing, delimited by "+" symbols
+                authorizeUrl: new Uri(App.Instance.oAuthSettings.AuthorizeUrl), // the auth URL for the service
+                redirectUrl: new Uri(App.Instance.oAuthSettings.RedirectUrl)); // the redirect URL for the service
+
+            auth.Completed += (sender, eventArgs) =>
+            {
+                // We presented the UI, so it's up to us to dimiss it on iOS.
+                App.Instance.SuccessfulLoginAction.Invoke();
+
+                if (eventArgs.IsAuthenticated)
+                {
+                    // Use eventArgs.Account to do wonderful things
+                    App.Instance.SaveToken(eventArgs.Account.Properties["access_token"]);
+                    //await App.Instance.facebookViewModel.SetFacebookUserProfileAsync(App.Instance.Token);
+                }
+                else
+                {
+                    // The user cancelled
+                }
+            };
+
+            PresentViewController(auth.GetUI(), true, null);
+        }
+```
+
+This Segment Creates a CustomRenderer for the IOS Section of our application. when the view appears, creates a webview of FAcebooks Login page. the callback URL specified in the OAuth2AuthenticatorObject specifies where the Login token is going, we can extract that token to use in our App Instance. <Commit bf880d7f05cf980bdac2d22f399c756b68e7d609: Facebook Login Fix.>
+
 * Mario - Using Xamarin Xaml code to generate display messages for the interface
 ```
 <Label
