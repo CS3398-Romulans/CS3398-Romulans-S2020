@@ -101,6 +101,20 @@ This Segment Creates a CustomRenderer for the IOS Section of our application. wh
 ```
 This code segments creates a label called HelloMessage which displays a welcome message with the users name after it being inputed.The message is displayed in the center of the users screen along with buttons at the very bottom. <commit 1aea3fbc0545f42cb6e4ac39e37b8ff44e196e64: Main Page UI>
 
+
+* Irene - creation of the Profile page :
+```
+  <    public partial class ProfilePage : ContentPage
+    {
+        public ProfilePage()
+        {
+            InitializeComponent();
+
+        }
+    }>
+```
+This code segment here is used to create the applications profile page to which additional features are to come soon <commit 9b52e9de4b9cace1a8af989f7aa4eb01ace4e11e: Add ProfilePage files>
+
 * Irene - using Xamarin, established buttons for SharePage :
 ```
    <Button
