@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Frisbee.Services;
@@ -6,11 +6,11 @@ using Xamarin.Forms;
 
 namespace Frisbee.ViewModels
 {
-    class ProfilePage : BaseContentPage
+    class TwitterProfilePage : BaseContentPage
     {
         Label label;
 
-        public ProfilePage()
+        public TwitterProfilePage()
         {
             label = new Label()
             {
